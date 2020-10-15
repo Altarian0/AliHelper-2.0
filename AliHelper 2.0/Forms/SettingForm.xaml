@@ -1,0 +1,49 @@
+﻿<Window x:Class="AliHelper_2._0.SettingForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AliHelper_2._0"
+        mc:Ignorable="d"
+        Title="Настройки" Height="416.667" Width="743.939" Closed="Window_Closed">
+    <Grid Background="#FF17212B">
+        <ListBox ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="0,10,513.6,10.2" Background="{x:Null}" BorderBrush="{x:Null}">
+            <ListBoxItem x:Name="ViewSettingsItem" Background="#FF1E2C3A" Height="37" Width="209" Selected="ViewSettingsItem_Selected">
+                <Grid Width="199" Height="34">
+                    <Image Source="/AliHelper 2.0;component/Icons/Кисть.png" HorizontalAlignment="Left" Width="30" Margin="0,1,0,0"/>
+                    <Label VerticalContentAlignment="Center" Content="Внешний вид" Margin="30,1,0,0" Foreground="White" FontSize="16" />
+                </Grid>
+            </ListBoxItem>
+            <ListBoxItem Margin="0,3,0,0" x:Name="SettingsItem" Background="#FF1E2C3A" Height="37" Width="209" Selected="SettingsItem_Selected">
+                <Grid Width="199" Height="34">
+                    <Image Source="/AliHelper 2.0;component/Icons/Ссылки.png" HorizontalAlignment="Left" Width="30" Margin="0,1,0,0"/>
+                    <Label VerticalContentAlignment="Center" Content="Генерация ссылок" Margin="30,1,0,0" Foreground="White" FontSize="16" />
+                </Grid>
+            </ListBoxItem>
+            <ListBoxItem Margin="0,3,0,0" x:Name="PostSetting" Background="#FF1E2C3A" Height="37" Width="209" Selected="PostSetting_Selected">
+                <Grid Width="199" Height="34">
+                    <Image Source="/AliHelper 2.0;component/Icons/Блокнот.png" HorizontalAlignment="Left" Width="30" Margin="0,1,0,0"/>
+                    <Label VerticalContentAlignment="Center" Content="Создание поста" Margin="30,1,0,0" Foreground="White" FontSize="16" />
+                </Grid>
+            </ListBoxItem>
+
+
+        </ListBox>
+        <Frame NavigationUIVisibility="Hidden" x:Name="Main" Margin="224,10,9.6,42.2"/>
+        <Border BorderThickness="1" CornerRadius="8,8,8,8" Margin="0,0,214.6,13.2" Background="#FF464F5A" Height="27" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="124">
+            <Button BorderThickness="0" x:Name="CancelButton" Margin="-0.8,-0.8,-0.8,-0.6"  Content="Отмена" FontSize="14" Foreground="White" Background="{x:Null}" FontWeight="Bold" FontFamily="Akrobat" BorderBrush="{x:Null}" Click="CancelButton_Click"/>
+        </Border>
+        <Grid Margin="0,0,343.6,13.2" Height="27" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="158">
+            <Border BorderThickness="1" CornerRadius="8,8,8,8" Background="#FF464F5A">
+                <Button BorderThickness="0" Visibility="Hidden" x:Name="SaveChangesButton" Margin="-0.8,-0.8,-1,-0.6"  Content="Применить" FontSize="14" Foreground="White" Background="{x:Null}" FontWeight="Bold" FontFamily="Akrobat" BorderBrush="{x:Null}" Click="SaveChangesButton_Click"/>
+            </Border>
+            <Label Name="SaveChangesLabel" Visibility="Visible" Content="Применить" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,2.5" Foreground="#FF898989">
+            </Label>
+
+        </Grid>
+        <Border BorderThickness="1" CornerRadius="8,8,8,8" Margin="0,0,9.6,13.2" Background="#FF464F5A" Height="27" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="124">
+            <Button BorderThickness="0" x:Name="ExitButton" Margin="-0.8,-0.8,-0.8,-0.6"  Content="Выход" FontSize="14" Foreground="White" Background="{x:Null}" FontWeight="Bold" FontFamily="Akrobat" BorderBrush="{x:Null}" Click="ExitButton_Click"/>
+        </Border>
+        <Border Visibility="Hidden" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Width="250" Margin="-26,-18,0,-15.8"/>
+    </Grid>
+</Window>
